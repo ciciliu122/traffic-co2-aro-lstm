@@ -1,1 +1,57 @@
+area,co2,sector,date
+RegionA,0.15169,Domestic Aviation,2024-01-01
+RegionA,2.521743,Ground Transport,2024-01-01
+RegionA,10.453925,Industry,2024-01-01
+RegionA,0.044927,International Aviation,2024-01-01
+RegionA,14.87531,Power,2024-01-01
+RegionA,4.34889,Residential,2024-01-01
+RegionA,32.351557,Total,2024-01-01
+
+RegionA,0.153776,Domestic Aviation,2024-01-02
+RegionA,2.539914,Ground Transport,2024-01-02
+RegionA,10.281563,Industry,2024-01-02
+RegionA,0.044283,International Aviation,2024-01-02
+RegionA,14.63005,Power,2024-01-02
+RegionA,4.180773,Residential,2024-01-02
+RegionA,31.786076,Total,2024-01-02
+
+RegionA,0.150419,Domestic Aviation,2024-01-03
+RegionA,2.529741,Ground Transport,2024-01-03
+RegionA,9.952874,Industry,2024-01-03
+RegionA,0.046064,International Aviation,2024-01-03
+RegionA,14.162345,Power,2024-01-03
+RegionA,3.871681,Residential,2024-01-03
+RegionA,30.667059,Total,2024-01-03
+
+RegionA,0.151461,Domestic Aviation,2024-01-04
+RegionA,2.574039,Ground Transport,2024-01-04
+RegionA,10.307618,Industry,2024-01-04
+RegionA,0.045362,International Aviation,2024-01-04
+RegionA,14.667124,Power,2024-01-04
+RegionA,3.826453,Residential,2024-01-04
+RegionA,31.526696,Total,2024-01-04
+
+RegionA,0.147445,Domestic Aviation,2024-01-05
+RegionA,2.5147,Ground Transport,2024-01-05
+RegionA,10.28958,Industry,2024-01-05
+RegionA,0.05034,International Aviation,2024-01-05
+RegionA,14.641457,Power,2024-01-05
+RegionA,3.909223,Residential,2024-01-05
+RegionA,31.502405,Total,2024-01-05
+
+RegionA,0.151019,Domestic Aviation,2024-01-06
+RegionA,2.453375,Ground Transport,2024-01-06
+RegionA,10.10142,Industry,2024-01-06
+RegionA,0.04522,International Aviation,2024-01-06
+RegionA,14.45681,Power,2024-01-06
+RegionA,3.8011,Residential,2024-01-06
+RegionA,30.998744,Total,2024-01-06
+
+RegionA,0.14988,Domestic Aviation,2024-01-07
+RegionA,2.43101,Ground Transport,2024-01-07
+RegionA,9.87891,Industry,2024-01-07
+RegionA,0.04401,International Aviation,2024-01-07
+RegionA,14.0981,Power,2024-01-07
+RegionA,3.65544,Residential,2024-01-07
+RegionA,30.25735,Total,2024-01-07
 
