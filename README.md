@@ -1,36 +1,48 @@
 # Traffic & CO₂ Emission Forecasting using ARO-Optimized LSTM
 
-A reproducible multi-sector CO₂ emission forecasting framework built with LSTM and ARO optimization.
+![python](https://img.shields.io/badge/Python-3.10+-blue.svg)
+![license](https://img.shields.io/badge/License-MIT-green.svg)
+![status](https://img.shields.io/badge/Status-Active-brightgreen.svg)
+![build](https://img.shields.io/badge/Model-LSTM%20%2B%20ARO-orange.svg)
 
-This repository contains a demo implementation of a **multi-sector CO₂ emission forecasting model** based on a Long Short-Term Memory (LSTM) network optimized using the **Artificial Rabbits Optimization (ARO)** algorithm.  
-It demonstrates my research workflow in intelligent highway energy systems, with a focus on:
+---
+
+<div align="center">
+
+### **A reproducible multi-sector CO₂ emission forecasting framework based on LSTM + ARO optimization**
+
+💡 *Smart highway decarbonization • Multivariate time-series • Metaheuristic tuning • Reproducible pipelines*
+
+</div>
+
+---
+
+This repository contains a demo implementation of a **multi-sector CO₂ emission forecasting model** based on a Long Short-Term Memory (LSTM) network optimized using the **Artificial Rabbits Optimization (ARO)** algorithm. It demonstrates my research workflow in intelligent highway energy systems, including:
 
 - Multivariate time-series forecasting  
 - CO₂ emission estimation  
-- Hyperparameter optimization using metaheuristics  
-- Data preprocessing and reproducible pipelines
+- Hyperparameter tuning using ARO  
+- Structured preprocessing and reproducible pipelines  
 
-> ⚠️ This repository uses synthetic example data for demonstration purposes only.  
-> No proprietary or project-specific data is included.
+> ⚠️ Synthetic data only.  
+> No proprietary or project-specific data is used.
 
 ---
 
 ## 🔍 Background
 
-Accurate forecasting of traffic-related CO₂ emissions is essential for smart highway management and low-carbon operations.  
-Traditional models (ARIMA, SARIMA, SVR, GBM) have limitations handling:
+Accurate forecasting of traffic-related CO₂ emissions is essential for smart highway operation and low-carbon transportation planning.  
+Traditional models (ARIMA, SARIMA, SVR, GBM) often struggle with:
 
-- Long-range temporal dependencies  
-- Highly nonlinear emission dynamics  
-- Multi-sector correlations  
+- Long temporal dependencies  
+- Highly nonlinear multi-sector dynamics  
+- Limited cross-sector modelling ability  
 
-Deep learning solves part of the problem, but the performance of models such as LSTM heavily depends on hyperparameter tuning.
+To address these challenges, this demo integrates:
 
-To address these gaps, this demo repo implements:
-
-- **An LSTM-based CO₂ forecasting model**  
-- **ARO metaheuristic optimization** for key hyperparameters  
-- **A clean data → model → evaluation workflow**
+- **LSTM deep sequence models**  
+- **ARO metaheuristic optimization**  
+- **Multi-output CO₂ forecasting design**  
 
 ---
 
@@ -63,8 +75,6 @@ traffic-co2-aro-lstm/
 
 ## 📊 Data Format
 
-The synthetic dataset follows this structure:
-
 | area    | co2       | sector           | date       |
 |---------|-----------|------------------|------------|
 | RegionA | 2.521743  | Ground Transport | 2024-01-01 |
@@ -74,6 +84,7 @@ The synthetic dataset follows this structure:
 | ...     | ...       | ...              | ...        |
 
 The dataset includes **7 predicted emission sectors**:
+
 - Domestic Aviation  
 - Ground Transport  
 - Industry  
@@ -82,55 +93,48 @@ The dataset includes **7 predicted emission sectors**:
 - Residential  
 - Total  
 
-The dataset is automatically **pivoted into wide format** for multi-task forecasting.
+The dataset is automatically pivoted into wide-format for multi-task forecasting.
 
 ---
 
 ## 🧠 Model Overview
 
-### 🔹 Multi-task LSTM (7 output sectors)
+### 🔹 Multi-task LSTM (7 outputs)
 
 - Input dimension: 7  
 - Output dimension: 7  
-- Captures long-term temporal dependencies  
-- Learns cross-sector relationships  
+- Learns long-range dependencies and cross-sector relationships  
 
 ### 🔹 ARO Hyperparameter Optimization
 
-The ARO optimizer tunes:
+The ARO algorithm searches:
 
 - Hidden size  
 - Number of LSTM layers  
 - Learning rate  
 
-A lightweight ARO implementation is provided for demonstration.
+Lightweight implementation included in `aro_optimizer.py`.
 
 ---
 
 ## ▶️ How to Run
 
 ### 1️⃣ Install dependencies
-
 ```bash
 pip install -r requirements.txt
 ```
 
 ### 2️⃣ Train the model
-
 ```bash
 python src/train.py
 ```
 
-### 3️⃣ Evaluate and generate prediction plot
-
+### 3️⃣ Evaluate & generate prediction plot
 ```bash
 python src/evaluate.py
 ```
 
-### 4️⃣ Run the end-to-end Notebook
-
-Open:
-
+### 4️⃣ Run full demo Notebook
 ```
 notebooks/demo_forecasting.ipynb
 ```
@@ -139,38 +143,84 @@ notebooks/demo_forecasting.ipynb
 
 ## 📈 Example Output
 
-The evaluation script produces a prediction plot comparing:
+Below is an example of the generated prediction plot (`results/prediction_plot.png`):
 
-- Real vs. Predicted CO₂ (Total sector)
-
-Saved to:
+> *Real vs Predicted CO₂ — Total Sector*
 
 ```
-results/prediction_plot.png
-```
-
-To embed the plot directly in README:
-
-```markdown
 ![Prediction Plot](results/prediction_plot.png)
+```
+
+(Upload the actual image into `results/` for automatic display)
+
+---
+
+## 📂 Technical Stack
+
+| Category | Tools |
+|---------|-------|
+| Deep Learning | PyTorch, LSTM |
+| Optimization | ARO (Artificial Rabbits Optimization) |
+| Data | Pandas, NumPy, MinMaxScaler |
+| Visualization | Matplotlib |
+| Reproducibility | Jupyter Notebook |
+
+---
+
+## 📐 Workflow Diagram
+
+```plaintext
+Raw Data (CSV)
+      ↓
+Pivot to wide format (7 sectors)
+      ↓
+Normalization & sequence generation
+      ↓
+Multi-task LSTM model
+      ↓
+ARO hyperparameter optimization
+      ↓
+Training → Validation → Testing
+      ↓
+Prediction Plot (results/prediction_plot.png)
+```
+
+---
+
+## 📚 Citation
+
+If you use or reference this repository:
+
+```bibtex
+@misc{liu2024trafficCO2,
+  title        = {traffic-co2-aro-lstm: Multi-sector CO₂ Forecasting with LSTM + ARO},
+  author       = {Liu, Xiaoya},
+  year         = {2024},
+  howpublished = {GitHub repository},
+  url          = {https://github.com/ciciliu122/traffic-co2-aro-lstm}
+}
 ```
 
 ---
 
 ## 🔮 Future Work
 
-Potential extensions include:
-
 - Transformer-based CO₂ forecasting  
-- GCN–LSTM hybrid spatial–temporal models  
-- Multi-region emission prediction  
-- Multi-energy flow modeling for smart highways  
-- Adaptive online learning for dynamic systems  
-- Integration with C-V2X systems  
+- Spatial–temporal GCN + LSTM hybrid models  
+- Multi-region and multi-energy forecasting  
+- Online adaptive learning  
+- Integration with C-V2X traffic systems  
 
 ---
 
 ## 📜 License
 
-MIT License  
-Free for research and non-commercial use.
+MIT License — free for research and non-commercial use.
+
+---
+
+<div align="center">
+
+⭐ If you find this project useful, please consider giving it a star!
+
+</div>
