@@ -10,7 +10,7 @@ It demonstrates my research workflow in intelligent highway energy systems, with
 - Hyperparameter optimization using metaheuristics  
 - Data preprocessing and reproducible pipelines
 
-> ⚠️ This repository uses *synthetic example data* for demonstration purposes only.  
+> ⚠️ This repository uses synthetic example data for demonstration purposes only.  
 > No proprietary or project-specific data is included.
 
 ---
@@ -57,106 +57,121 @@ traffic-co2-aro-lstm/
 │
 ├── results/
 │   └── prediction_plot.png
+```
 
-📊 Data Format
+---
+
+## 📊 Data Format
+
 The synthetic dataset follows this structure:
+
 | area    | co2       | sector           | date       |
-| ------- | --------- | ---------------- | ---------- |
+|---------|-----------|------------------|------------|
 | RegionA | 2.521743  | Ground Transport | 2024-01-01 |
 | RegionA | 10.453925 | Industry         | 2024-01-01 |
 | RegionA | 14.875310 | Power            | 2024-01-01 |
 | RegionA | 4.348890  | Residential      | 2024-01-01 |
 | ...     | ...       | ...              | ...        |
 
-The dataset includes 7 predicted emission sectors:
+The dataset includes **7 predicted emission sectors**:
 
-- Domestic Aviation
+- Domestic Aviation  
+- Ground Transport  
+- Industry  
+- International Aviation  
+- Power  
+- Residential  
+- Total  
 
-- Ground Transport
+The dataset is automatically **pivoted into wide format** for multi-task forecasting.
 
-- Industry
+---
 
-- International Aviation
+## 🧠 Model Overview
 
-- Power
+### 🔹 Multi-task LSTM (7 output sectors)
 
-- Residential
+- Input dimension: 7  
+- Output dimension: 7  
+- Captures long-term temporal dependencies  
+- Learns cross-sector relationships  
 
-- Total
-
-The dataset is automatically pivoted into wide format for multi-task forecasting.
-
-🧠 Model Overview
-🔹 Multi-task LSTM (7 output sectors)
-
-- Input dimension: 7
-
-- Output dimension: 7
-
-- Captures long-term temporal dependencies
-
-- Learns cross-sector relationships
-
-🔹 ARO Hyperparameter Optimization
+### 🔹 ARO Hyperparameter Optimization
 
 The ARO optimizer tunes:
 
-- Hidden size
-
-- Number of LSTM layers
-
-- Learning rate
+- Hidden size  
+- Number of LSTM layers  
+- Learning rate  
 
 A lightweight ARO implementation is provided for demonstration.
 
-▶️ How to Run
-1️⃣ Install dependencies
+---
+
+## ▶️ How to Run
+
+### 1️⃣ Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-2️⃣ Train the model
+### 2️⃣ Train the model
+
+```bash
 python src/train.py
+```
 
-3️⃣ Evaluate and generate prediction plot
+### 3️⃣ Evaluate and generate prediction plot
+
+```bash
 python src/evaluate.py
+```
 
-4️⃣ Run the end-to-end Notebook
+### 4️⃣ Run the end-to-end Notebook
 
 Open:
 
+```
 notebooks/demo_forecasting.ipynb
+```
 
-📈 Example Output
+---
+
+## 📈 Example Output
 
 The evaluation script produces a prediction plot comparing:
 
-Real vs. Predicted CO₂ (Total sector)
+- Real vs. Predicted CO₂ (Total sector)
 
 Saved to:
 
+```
 results/prediction_plot.png
-
+```
 
 To embed the plot directly in README:
 
+```markdown
 ![Prediction Plot](results/prediction_plot.png)
+```
 
-🔮 Future Work
+---
 
-- Potential extensions include:
+## 🔮 Future Work
 
-- Transformer-based CO₂ forecasting
+Potential extensions include:
 
-- GCN–LSTM hybrid spatial-temporal models
+- Transformer-based CO₂ forecasting  
+- GCN–LSTM hybrid spatial-temporal models  
+- Multi-region emission prediction  
+- Multi-energy flow modeling for smart highways  
+- Adaptive online learning for dynamic systems  
+- Integration with C-V2X systems  
 
-- Multi-region emission prediction
+---
 
-- Multi-energy flow modeling for smart highways
+## 📜 License
 
-- Adaptive online learning for dynamic systems
-
-- Integration with C-V2X traffic systems
-
-📜 License
-
-MIT License
+MIT License  
 Free for research and non-commercial use.
