@@ -20,9 +20,9 @@ It demonstrates my research workflow in intelligent highway energy systems, with
 Accurate forecasting of traffic-related CO₂ emissions is essential for smart highway management and low-carbon operations.  
 Traditional models (ARIMA, SARIMA, SVR, GBM) have limitations handling:
 
-- long-range temporal dependencies  
-- highly nonlinear emission dynamics  
-- multi-sector correlations  
+- Long-range temporal dependencies  
+- Highly nonlinear emission dynamics  
+- Multi-sector correlations  
 
 Deep learning solves part of the problem, but the performance of models such as LSTM heavily depends on hyperparameter tuning.
 
@@ -74,7 +74,6 @@ The synthetic dataset follows this structure:
 | ...     | ...       | ...              | ...        |
 
 The dataset includes **7 predicted emission sectors**:
-
 - Domestic Aviation  
 - Ground Transport  
 - Industry  
@@ -163,7 +162,7 @@ To embed the plot directly in README:
 Potential extensions include:
 
 - Transformer-based CO₂ forecasting  
-- GCN–LSTM hybrid spatial-temporal models  
+- GCN–LSTM hybrid spatial–temporal models  
 - Multi-region emission prediction  
 - Multi-energy flow modeling for smart highways  
 - Adaptive online learning for dynamic systems  
