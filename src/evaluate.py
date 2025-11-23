@@ -17,7 +17,7 @@ def evaluate_model():
 
     # ---- Load hyperparameters ----
     if not os.path.exists("results/best_params.json"):
-        raise FileNotFoundError("❌ Missing best_params.json. Run train.py first!")
+        raise FileNotFoundError("Missing best_params.json. Run train.py first!")
 
     with open("results/best_params.json", "r") as f:
         hparams = json.load(f)
@@ -66,7 +66,7 @@ def evaluate_model():
     plt.savefig("results/prediction_plot.png", dpi=300)
     plt.close()
 
-    print("✅ Prediction plot saved → results/prediction_plot.png")
+    print("Prediction plot saved → results/prediction_plot.png")
 
 
 if __name__ == "__main__":
