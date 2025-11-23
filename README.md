@@ -68,7 +68,7 @@ traffic-co2-aro-lstm/
 │   └── demo_forecasting.ipynb
 │
 ├── results/
-│   └── prediction_plot.png
+│   └── full_sequence_vs_real.png
 ```
 
 ---
@@ -143,16 +143,14 @@ notebooks/demo_forecasting.ipynb
 
 ##  Results(Outputs)
 
-Below is an example of the generated prediction plot (`results/prediction_plot.png`):
+Below is an example of the generated prediction plot (`results/full_sequence_vs_real.png`):
 
 > *Real vs Predicted CO₂ — Total Sector*
 
-```
-![Full Sequence Prediction](results/full_sequence_vs_real.png)
+![Full Sequence CO₂ Forecast](results/full_sequence_vs_real.png)
 
 
 
-```
 
 
 ---
@@ -184,7 +182,7 @@ ARO hyperparameter optimization
       ↓
 Training → Validation → Testing
       ↓
-Prediction Plot (results/prediction_plot.png)
+Prediction Plot (results/full_sequence_vs_real.png)
 ```
 
 ---
