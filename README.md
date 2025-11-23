@@ -148,7 +148,9 @@ Below is an example of the generated prediction plot (`results/prediction_plot.p
 > *Real vs Predicted CO₂ — Total Sector*
 
 ```
-<img width="2800" height="1200" alt="full_sequence_vs_real" src="https://github.com/user-attachments/assets/8933c525-ca1d-4151-8461-b6bb79d4cbfd" />
+![Full Sequence Prediction](results/full_sequence_vs_real.png)
+
+
 
 ```
 
