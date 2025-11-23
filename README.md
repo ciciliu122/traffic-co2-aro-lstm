@@ -29,7 +29,7 @@ This repository contains a demo implementation of a **multi-sector CO₂ emissio
 
 ---
 
-## 🔍 Background
+##  Background
 
 Accurate forecasting of traffic-related CO₂ emissions is essential for smart highway operation and low-carbon transportation planning.  
 Traditional models (ARIMA, SARIMA, SVR, GBM) often struggle with:
@@ -46,7 +46,7 @@ To address these challenges, this demo integrates:
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```plaintext
 traffic-co2-aro-lstm/
@@ -73,7 +73,7 @@ traffic-co2-aro-lstm/
 
 ---
 
-## 📊 Data Format
+##  Data Format
 
 | area    | co2       | sector           | date       |
 |---------|-----------|------------------|------------|
@@ -97,15 +97,15 @@ The dataset is automatically pivoted into wide-format for multi-task forecasting
 
 ---
 
-## 🧠 Model Overview
+##  Model Overview
 
-### 🔹 Multi-task LSTM (7 outputs)
+###  Multi-task LSTM (7 outputs)
 
 - Input dimension: 7  
 - Output dimension: 7  
 - Learns long-range dependencies and cross-sector relationships  
 
-### 🔹 ARO Hyperparameter Optimization
+###  ARO Hyperparameter Optimization
 
 The ARO algorithm searches:
 
@@ -117,45 +117,45 @@ Lightweight implementation included in `aro_optimizer.py`.
 
 ---
 
-## ▶️ How to Run
+##  How to Run
 
-### 1️⃣ Install dependencies
+### 1️ Install dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2️⃣ Train the model
+### 2️ Train the model
 ```bash
 python src/train.py
 ```
 
-### 3️⃣ Evaluate & generate prediction plot
+### 3️ Evaluate & generate prediction plot
 ```bash
 python src/evaluate.py
 ```
 
-### 4️⃣ Run full demo Notebook
+### 4️ Run full demo Notebook
 ```
 notebooks/demo_forecasting.ipynb
 ```
 
 ---
 
-## 📈 Example Output
+##  Results(Outputs)
 
 Below is an example of the generated prediction plot (`results/prediction_plot.png`):
 
 > *Real vs Predicted CO₂ — Total Sector*
 
 ```
-![Prediction Plot](results/prediction_plot.png)
+<img width="2800" height="1200" alt="full_sequence_vs_real" src="https://github.com/user-attachments/assets/8933c525-ca1d-4151-8461-b6bb79d4cbfd" />
+
 ```
 
-(Upload the actual image into `results/` for automatic display)
 
 ---
 
-## 📂 Technical Stack
+##  Technical Stack
 
 | Category | Tools |
 |---------|-------|
@@ -167,7 +167,7 @@ Below is an example of the generated prediction plot (`results/prediction_plot.p
 
 ---
 
-## 📐 Workflow Diagram
+##  Workflow Diagram
 
 ```plaintext
 Raw Data (CSV)
@@ -187,7 +187,7 @@ Prediction Plot (results/prediction_plot.png)
 
 ---
 
-## 📚 Citation
+##  Citation
 
 If you use or reference this repository:
 
@@ -203,7 +203,7 @@ If you use or reference this repository:
 
 ---
 
-## 🔮 Future Work
+##  Future Work
 
 - Transformer-based CO₂ forecasting  
 - Spatial–temporal GCN + LSTM hybrid models  
@@ -213,14 +213,9 @@ If you use or reference this repository:
 
 ---
 
-## 📜 License
+##  License
 
 MIT License — free for research and non-commercial use.
 
 ---
 
-<div align="center">
-
-⭐ If you find this project useful, please consider giving it a star!
-
-</div>
