@@ -141,16 +141,13 @@ notebooks/demo_forecasting.ipynb
 
 ---
 
-##  Results(Outputs)
+##  Results-Full-Sequence Rolling Forecast (Multi-Task LSTM — Total Sector)
 
 Below is an example of the generated prediction plot (`results/full_sequence_vs_real.png`):
 
 > *Real vs Predicted CO₂ — Total Sector*
 
 ![Full Sequence CO₂ Forecast](results/full_sequence_vs_real.png)
-
-
-
 
 
 ---
