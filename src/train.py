@@ -139,14 +139,21 @@ if __name__ == "__main__":
         iterations=5   # small number for demo
     )
 
-    print("🔍 Running ARO hyperparameter search...")
+    print(" Running ARO hyperparameter search...")
     best_params, best_loss = optimizer.optimize()
-    print("\n🎯 Best hyperparameters found:")
+    print("\n Best hyperparameters found:")
     print(best_params)
     print(f"Validation loss: {best_loss:.6f}")
 
+    import json
+    os.makedirs("results", exist_ok=True)
+    with open("results/best_params.json", "w") as f:
+        json.dump(best_params, f, indent=4)
+    print("Best hyperparameters saved → results/best_params.json")
+
+
     # -------- Final training using best hyperparameters --------
-    print("\n🚀 Training final model...")
+    print("\n Training final model...")
     model = train_final_model(best_params, X_train, y_train)
 
-    print("\n🎉 Training completed!")
+    print("\n Training completed!")
