@@ -55,7 +55,7 @@ def evaluate():
     plt.tight_layout()
     plt.savefig("results/multi_prediction_plot.png", dpi=200)
 
-    print("\n📈 Prediction figure saved → results/multi_prediction_plot.png")
+    print("\n Prediction figure saved → results/multi_prediction_plot.png")
 
 if __name__ == "__main__":
     evaluate()
